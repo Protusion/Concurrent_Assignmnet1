@@ -1,4 +1,7 @@
 package Concurrent_Assignmnet1.C;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  * Modify class concurrent_assignment1.B.TPrintID so that it is created implementing Runnable 
  * (call the new class R_PrintID). 
@@ -16,8 +19,14 @@ public class R_PrintID implements Runnable{
     }
     
     public void run(){
+        Random r = new Random();
         for(int i = 0; i < 10 ; i++){
-            System.out.println(this.ID);
+            try {
+                System.out.println(this.ID);
+                Thread.sleep(r.nextInt(1000));
+            } catch (InterruptedException ex) {
+                System.out.println(ex);
+            }
         }
     }
 }

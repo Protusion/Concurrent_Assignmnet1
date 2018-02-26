@@ -8,16 +8,11 @@ package Concurrent_Assignmnet1.C;
  *
  */
 
-public class Numbers {
-    public Numbers(){
+public class Numbers {    
+    public static void main (String[] Args){
         R_PrintID ids[] = new R_PrintID[5];
         for(int i = 1; i < 5; i++){
             (new Thread (new R_PrintID(i))).start();
         }
-        
-    }
-    
-    public static void main (String[] Args){
-        Numbers numbers = new Numbers();
     }
 }
