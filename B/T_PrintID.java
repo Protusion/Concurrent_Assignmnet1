@@ -5,7 +5,7 @@ package Concurrent_Assignmnet1.B;
  *	- It must contain a variable ID whose value is first set through the class constructor.
  *	- Method run() has a loop which iterates 10 times displaying ID.
  *
- * @author yournamehere
+ * @author Alberto and Rocío
  */
 
 public class T_PrintID extends Thread {
