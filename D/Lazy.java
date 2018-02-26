@@ -1,4 +1,4 @@
-package concurrent_assignment1.D;
+package Concurrent_Assignmnet1.D;
 
 /** Lazy must:
  * - Extend Thread
@@ -12,6 +12,6 @@ package concurrent_assignment1.D;
  *
  */
 
-public class Lazy {
+public class Lazy extends Thread{
 
 }
