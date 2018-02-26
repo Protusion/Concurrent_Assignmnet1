@@ -5,7 +5,7 @@ package Concurrent_Assignmnet1.A;
  */
 public class Reference {
 
-    public static void thread() {
+    public void thread() {
         try {
             Thread h = Thread.currentThread();
             System.out.println(h.getName());
