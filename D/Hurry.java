@@ -1,4 +1,8 @@
 package Concurrent_Assignmnet1.D;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Hurry must:
  * - Be the main thread
@@ -13,5 +17,31 @@ package Concurrent_Assignmnet1.D;
 
 
 public class Hurry {
-
+    public static void main (String[] Args){
+        Lazy lazy = new Lazy();
+        lazy.start();
+        for (int i=0; i< 5 && lazy.isAlive(); i++){
+            
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                
+            }
+            System.out.println("Aren’t you ready yet?");
+            
+           
+        }
+        if(lazy.isAlive() == true ){
+            System.out.println("You are resting in your laurels… and I am leaving!");
+            lazy.interrupt();
+            
+        }else  System.out.println("At last, a turtle runs rings round you!");
+     
+        try {
+            lazy.join();
+        } catch (InterruptedException ex) {
+            System.out.println(ex);
+        }
+    }
+    
 }
