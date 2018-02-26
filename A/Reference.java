@@ -18,4 +18,9 @@ public class Reference {
             System.out.println("A wild Interruped Exception appared");
         }
     }
+    
+    public static void main (String[] Args){
+        Reference reference = new Reference();
+        reference.thread();
+    }
 }
