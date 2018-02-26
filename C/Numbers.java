@@ -16,4 +16,8 @@ public class Numbers {
         }
         
     }
+    
+    public static void main (String[] Args){
+        Numbers numbers = new Numbers();
+    }
 }
